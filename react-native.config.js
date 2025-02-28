@@ -1,0 +1,25 @@
+module.exports = {
+  dependencies: {
+    'react-native-vector-icons': {},
+    'react-native-svg': {},
+    'react-native-reanimated': {},
+    'react-native-gesture-handler': {},
+    '@react-native-firebase/app': {},
+    '@react-native-firebase/auth': {},
+    '@react-native-firebase/firestore': {},
+    '@react-native-firebase/analytics': {},
+  },
+  assets: [
+    'Resources/*.ttf',
+    'app/assets/favicon.ico',
+    'app/Pictures/*.png',
+    'app/fonts/MaterialCommunityIcons.ttf',
+    'app/fonts/Ionicons.ttf',
+    'assets/node_modules/react-native-vector-icons/Fonts/*.ttf',
+    'assets/fonts/*.ttf',
+    'assets/favicon.ico',
+    'node_modules/react-native-vector-icons/Fonts/*.ttf',
+    'node_modules/@types/react-native-vector-icons*.d.ts',
+    'node_modules/expo-router/assets/pkg.png',
+  ],
+}

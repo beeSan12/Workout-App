@@ -1,0 +1,12 @@
+{
+  //tsconfig.jest.json
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "jsx": "react",
+    "types": ["jest"]
+  },
+  "include": ["__tests__/**/*", "__mocks__/**/*"],
+  "exclude": ["node_modules", "dist/", "coverage"]
+}
