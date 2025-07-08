@@ -129,8 +129,8 @@ My Workout App is a comprehensive fitness tracking and workout management applic
 **Clone the repository:**
 
 ```bash
-   git clone https://github.com/bs222eh/myworkoutapp.git
-   cd myworkoutapp
+   git clone https://github.com/beeSan12/Workout-App.git
+   cd Workout-App
 ```
 
 **Install dependencies:**
@@ -142,12 +142,24 @@ My Workout App is a comprehensive fitness tracking and workout management applic
 **Set up Firebase:**
 
 - Create a Firebase project.
-- Add Firebase configuration in FirebaseConfig.js.
+- Add Firebase configuration in FirebaseConfig.ts.
+
+**Build the app locally:**
+
+```bash
+  yarn build
+```
 
 **Run the app locally:**
 
 ```bash
   yarn start
+```
+
+**Build the app for deployment:**
+
+```bash
+  yarn build:web
 ```
 
 **Deploy to Firebase:**
