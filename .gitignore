@@ -73,10 +73,10 @@ dataconnect/
 .github/
 .firebase/
 Reflection.md
-firebase.rules
+# firebase.rules
 # firestore.rules
 # storage.rules
-firebase.json
+# firebase.json
 # FirebaseConfig.ts
 app.json
 app.config.js
@@ -88,7 +88,7 @@ metro.config.js
 jest/setup.js
 # .eslintrc.js
 watchman.json
-database.rules.json
+# database.rules.json
 .yarnrc.yml
 .gitlab-ci.yml
 .gitattributes
