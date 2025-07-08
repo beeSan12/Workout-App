@@ -68,7 +68,7 @@ expo-env.d.bak
 .envrc
 coverage/
 generated/
-dist/
+# dist/
 dataconnect/
 .github/
 .firebase/
