@@ -1,0 +1,35 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // This generic rule has been set to 'false', which denies all read/write operations
+    // It's commented out here because it's too restrictive and overridden by more specific rules below.
+    // match /{document=**} {
+    //   allow read, write: if false;
+    // }
+    //match /emailLookup/{email} {
+      // Endast skrivningar om referensen inte redan finns
+      //allow read: if true;
+      // allow get, list: if resource.data.keys().hasAny(['email'])
+      // allow create: if !exists(/databases/$(database)/documents/emailLookup/$(email));
+      //allow read: if request.auth != null; // Endast inloggade kan läsa
+    //}
+
+    // Specific rules for user data
+     match /users/{userId} {
+      // Allow unauthenticated users to read only the 'email' field
+      allow get, list: if resource.data.keys().hasAny(['email'])
+      
+      // Allow authenticated users to read and write their own documents
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    
+      // Nested collection under each user
+      match /workouts/{workoutId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+    }
+
+    // You can add more specific rules for other paths as needed
+  }
+}

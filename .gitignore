@@ -64,6 +64,7 @@ expo-env.d.ts
 expo-env.d.bak
 # @end expo-cli
 .env
+.env.local
 .envrc
 coverage/
 generated/
@@ -73,10 +74,10 @@ dataconnect/
 .firebase/
 Reflection.md
 firebase.rules
-firestore.rules
-storage.rules
+# firestore.rules
+# storage.rules
 firebase.json
-FirebaseConfig.ts
+# FirebaseConfig.ts
 app.json
 app.config.js
 eslint.config.js
