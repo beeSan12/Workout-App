@@ -1,0 +1,11 @@
+{
+  "projects": {
+    "default": "mynewworkoutapp"
+  },
+  "targets": {},
+  "etags": {
+    "mynewworkoutapp": {
+      "extensionInstances": {}
+    }
+  }
+}

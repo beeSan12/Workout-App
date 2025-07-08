@@ -1,0 +1,40 @@
+name: Deploy to Google Cloud
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      # Enable debug logging for GitHub Actions
+      - name: Enable debug logging
+        run: |
+          echo "RUNNER_DEBUG=true" >> $GITHUB_ENV
+
+      # Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Install dependencies and build the project
+      - name: Install dependencies and build
+        run: |
+          yarn install
+          yarn build
+
+      # Authenticate to Google Cloud using Workload Identity Federation
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v1
+        with:
+          workload_identity_provider: 'projects/822718028286/locations/global/workloadIdentityPools/project/providers/github-actions'
+          service_account: 'github-action@my-new-workout-app.iam.gserviceaccount.com'
+
+      # Deploy files from the dist folder to Google Cloud Storage
+      - name: Deploy to GCS
+        run: |
+          gsutil cp -r ./dist gs://example-bucket-app/

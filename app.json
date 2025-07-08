@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "myNewWorkoutApp",
+    "slug": "my-new-workout-app",
+    "scheme": "mynewworkoutapp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*",
+      "node_modules/react-native-vector-icons/Fonts/*",
+      "app/Pictures/**/*",
+      "app/Resources/**/*",
+      "./app/assets/**/*",
+      "app/assets/**/*"
+    ],
+    "platforms": ["web"],
+    "web": {
+      "platform": "web",
+      "favicon": "./assets/favicon.ico",
+      "bundler": "metro",
+      "output": "static",
+      "publicPath": "/dist",
+      "fonts": {
+        "Ionicons": "./node_modules/react-native-vector-icons/Fonts/Ionicons.ttf",
+        "MaterialCommunityIcons": "./node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"
+      }
+    },
+    "experiments": {
+      "typedRoutes": true
+    },
+    "plugins": ["expo-font", "expo-router", "expo-asset"],
+    "owner": "bsandeveloper",
+    "sdkVersion": "52.0.9",
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/67e40580-24ea-42a1-a91f-1372f453067a"
+    }
+  }
+}

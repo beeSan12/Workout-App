@@ -70,19 +70,19 @@ coverage/
 generated/
 # dist/
 dataconnect/
-.github/
-.firebase/
+# .github/
+# .firebase/
 Reflection.md
 # firebase.rules
 # firestore.rules
 # storage.rules
 # firebase.json
 # FirebaseConfig.ts
-app.json
+# app.json
 app.config.js
 eslint.config.js
 # tsconfig.json
-.firebaserc
+# .firebaserc
 metro.config.js
 # jest.config.js
 jest/setup.js
@@ -92,7 +92,6 @@ watchman.json
 .yarnrc.yml
 .gitlab-ci.yml
 .gitattributes
-.firebaserc
 .expo/
 .expo-shared/
 build/
@@ -103,3 +102,4 @@ build/
 .vscode/
 .DS_Store
 firebase-debug.log
+
