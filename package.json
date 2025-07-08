@@ -12,14 +12,14 @@
       }
     }
   },
-  "scripts": {
-    "build": "expo build:web",
+   "scripts": {
+    "build": "tsc",
     "build:all": "yarn build:web",
-    "start": "expo start --web",
+    "start": "node dist/index.js",
     "build:web": "NODE_ENV=production yarn clean && tsc && expo export --platform web",
     "start:prod": "NODE_ENV=production expo start --no-dev --minify",
     "clean": "rm -rf dist",
-    "start:web": "tsc --Workout-App tsconfig.json && expo start --web",
+    "start:web": "tsc --project tsconfig.json && expo start --web",
     "test": "jest",
     "lint": "eslint . '**/*.{js,jsx,ts,tsx}' --output-file=/tmp/lint.log || true",
     "lint:fix": "eslint '**/*.{js,jsx,ts,tsx}' --fix",
